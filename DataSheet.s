@@ -29,7 +29,7 @@ ASR R0,R1,#4 ;R0 = aritmetic shift right 4 bits de R1
 ROR R0,R1,#4 ;R0 = dá rotate para a direita 4 bits
 ;Se R1 = 0000 0000 0000 1001 , com o rotate R0 = 1001 0000 0000 0000
 
-;labels = "nome": ou seja "loop:" é uma label
+;labels = "nome:" ou seja "loop:" é uma label
 
 loop:
 Add R0,R1,R2
@@ -62,7 +62,7 @@ Bge Label ; se N xor V = 1 então realiza Label
 
  ;condições para inteiros assinalados
 
-  cmp R0, R1 bne label ;if(a == b)
+ cmp R0, R1 bne label ;if(a == b)
  cmp R0, R1 beq label ;if(a != b)
  cmp R1, R0 bge label ;if(a > b)
  cmp R0, R1 bge label ;if(a < b)
