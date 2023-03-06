@@ -1,3 +1,3 @@
 # Assembly_DataSheet
-Data sheet of assembly code for computer architecture
+Data sheet of assembly code for computer architecture.
 ## (Work in progress)
