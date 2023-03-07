@@ -12,7 +12,7 @@ Cmp R0,R1 ;R0-R1 e atualiza os bits de estado de CPSR
 mov R0,#5 ;copia o valor 5 para o reg0 e 0 para os bits de maior peso ----> reg0 = 0000 0000 0000 0101
 movt R0,#5 ;copia o valor 5 para os bits de maior peso de reg0 ---> reg0 = 0000 0101 0000 0000
 
-;se fizermos mov e depois movt com os mesmos exemplos reg0 = 0000 0101 0000 0101
+;se for feito mov e depois movt com os mesmos exemplos reg0 = 0000 0101 0000 0101
 ;se for feito movt e depois mov reg0 = 0000 0000 0000 0101
 
 mvn R0,R1 ;R0 = Not R1
