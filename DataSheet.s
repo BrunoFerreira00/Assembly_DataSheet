@@ -51,7 +51,7 @@ Bcs Label ;se C = 1 então realiza Label
 Blt Label ; se N xor V = 0 então realiza Label
 Bge Label ; se N xor V = 1 então realiza Label
 
-;condições para inteiros não assinalados
+;condições para inteiros não assinalados (sem sinal , bit de menor peso = 0)
 
  cmp R0, R1 bne label ;(a == b)
  cmp R0, R1 beq label ;if(a != b)
@@ -60,7 +60,7 @@ Bge Label ; se N xor V = 1 então realiza Label
  cmp R0, R1 blo label ;if(a >= b)
  cmp R1, R0 blo label ;if(a <= b)
 
- ;condições para inteiros assinalados
+ ;condições para inteiros assinalados (com sinal , bit de maior peso = 1)
 
  cmp R0, R1 bne label ;if(a == b)
  cmp R0, R1 beq label ;if(a != b)
