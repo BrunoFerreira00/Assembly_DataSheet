@@ -12,7 +12,7 @@ Cmp R0,R1 ;R0-R1 e atualiza os bits de estado de CPSR
 mov R0,#5 ;copia o valor 5 para o reg0 e 0 para os bits de maior peso ----> reg0 = 0000 0000 0000 0101
 movt R0,#5 ;copia o valor 5 para os bits de maior peso de reg0 ---> reg0 = 0000 0101 0000 0000
 
-;se fizermos mov e depois movt com os mesmos exemplos reg0 = 0000 0101 0000 0101
+;se for feito mov e depois movt com os mesmos exemplos reg0 = 0000 0101 0000 0101
 ;se for feito movt e depois mov reg0 = 0000 0000 0000 0101
 
 mvn R0,R1 ;R0 = Not R1
@@ -37,21 +37,25 @@ Sub R0,R1,R2
 ;Quando o label for chamado este realizará as expressões seguintes
 
 loop:
-Add R0,R1,R2 ;1
-Sub R0,R1,R2 ;2
+Add R0,R1,R2 ;1°
+Sub R0,R1,R2 ;2°
 B loop
 ;Este excerto de código realiza os pontos 1,2,1,2 , pois B(Branch) serve para chamar e realizar o label
 
-bzc/bne label ; se Z = 0 então realiza a label
-bzs/beq label ; se Z = 1 então realiza a label
+bne label ; se Z = 0 então realiza a label
+beq label ; se Z = 1 então realiza a label
 
-Bhs/Bcc Label ;se C = 0 então realiza Label
-Blo/Bcs Label ;se C = 1 então realiza Label
+Bcc Label ;se C = 0 então realiza Label
+Bcs Label ;se C = 1 então realiza Label
 
 Blt Label ; se N xor V = 0 então realiza Label
 Bge Label ; se N xor V = 1 então realiza Label
 
+<<<<<<< HEAD
 ;condições para inteiros não assinalados (ou seja no domínio dos naturais)
+=======
+;condições para inteiros não assinalados (sem sinal , bit de menor peso = 0)
+>>>>>>> refs/remotes/origin/main
 
  cmp R0, R1 bne label ;(a == b)
  cmp R0, R1 beq label ;if(a != b)
@@ -60,7 +64,11 @@ Bge Label ; se N xor V = 1 então realiza Label
  cmp R0, R1 blo label ;if(a >= b)
  cmp R1, R0 blo label ;if(a <= b)
 
+<<<<<<< HEAD
  ;condições para inteiros assinalados (ou seja no domínio dos complementos)
+=======
+ ;condições para inteiros assinalados (com sinal , bit de maior peso = 1)
+>>>>>>> refs/remotes/origin/main
 
  cmp R0, R1 bne label ;if(a == b)
  cmp R0, R1 beq label ;if(a != b)
