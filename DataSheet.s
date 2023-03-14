@@ -51,11 +51,7 @@ Bcs Label ;se C = 1 então realiza Label
 Blt Label ; se N xor V = 0 então realiza Label
 Bge Label ; se N xor V = 1 então realiza Label
 
-<<<<<<< HEAD
 ;condições para inteiros não assinalados (ou seja no domínio dos naturais)
-=======
-;condições para inteiros não assinalados (sem sinal , bit de menor peso = 0)
->>>>>>> refs/remotes/origin/main
 
  cmp R0, R1 bne label ;(a == b)
  cmp R0, R1 beq label ;if(a != b)
@@ -64,11 +60,7 @@ Bge Label ; se N xor V = 1 então realiza Label
  cmp R0, R1 blo label ;if(a >= b)
  cmp R1, R0 blo label ;if(a <= b)
 
-<<<<<<< HEAD
  ;condições para inteiros assinalados (ou seja no domínio dos complementos)
-=======
- ;condições para inteiros assinalados (com sinal , bit de maior peso = 1)
->>>>>>> refs/remotes/origin/main
 
  cmp R0, R1 bne label ;if(a == b)
  cmp R0, R1 beq label ;if(a != b)
