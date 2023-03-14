@@ -34,13 +34,13 @@ ROR R0,R1,#4 ;R0 = dá rotate para a direita 4 bits
 loop:
 Add R0,R1,R2
 Sub R0,R1,R2
-;Quando o label for chamado este realizará o Add , pois o label é apenas a expressão seguinte
+;Quando o label for chamado este realizará as expressões seguintes
 
 loop:
 Add R0,R1,R2 ;1
 Sub R0,R1,R2 ;2
 B loop
-;Este excerto de código realiza os pontos 1,2,1 , pois B(Branch) serve para chamar e realizar o label
+;Este excerto de código realiza os pontos 1,2,1,2 , pois B(Branch) serve para chamar e realizar o label
 
 bzc/bne label ; se Z = 0 então realiza a label
 bzs/beq label ; se Z = 1 então realiza a label
@@ -51,7 +51,7 @@ Blo/Bcs Label ;se C = 1 então realiza Label
 Blt Label ; se N xor V = 0 então realiza Label
 Bge Label ; se N xor V = 1 então realiza Label
 
-;condições para inteiros não assinalados
+;condições para inteiros não assinalados (ou seja no domínio dos naturais)
 
  cmp R0, R1 bne label ;(a == b)
  cmp R0, R1 beq label ;if(a != b)
@@ -60,7 +60,7 @@ Bge Label ; se N xor V = 1 então realiza Label
  cmp R0, R1 blo label ;if(a >= b)
  cmp R1, R0 blo label ;if(a <= b)
 
- ;condições para inteiros assinalados
+ ;condições para inteiros assinalados (ou seja no domínio dos complementos)
 
  cmp R0, R1 bne label ;if(a == b)
  cmp R0, R1 beq label ;if(a != b)
