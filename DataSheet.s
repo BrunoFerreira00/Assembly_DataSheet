@@ -68,3 +68,10 @@ Bge Label ; se N xor V = 1 então realiza Label
  cmp R0, R1 bge label ;if(a < b)
  cmp R0, R1 blt label ;if(a >= b)
  cmp R1, R0 blt label ;if(a <= b)
+
+
+;para trocar o valor entre 2 registos
+eor r0, r0, r1
+eor r1, r1, r0
+eor r0, r0 ,r1
+;r0 ficará com o valor de r1 e r1 ficará com o valor de r0
