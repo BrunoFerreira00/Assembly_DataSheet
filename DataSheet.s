@@ -29,6 +29,9 @@ ASR R0,R1,#4 ;R0 = aritmetic shift right 4 bits de R1
 ROR R0,R1,#4 ;R0 = dá rotate para a direita 4 bits
 ;Se R1 = 0000 0000 0000 1001 , com o rotate R0 = 1001 0000 0000 0000
 
+RRX R0,R1,#4 ; dá rotate para a direita mas o bit de Carry fica no lugar do bit menos significativo
+;Se R1= 0000 0000 0000 1000 e carry=1, com o rrx r0= 1001 0000 0000 0000LD
+
 ;labels = "nome:" ou seja "loop:" é uma label
 
 loop:
@@ -75,3 +78,16 @@ eor r0, r0, r1
 eor r1, r1, r0
 eor r0, r0 ,r1
 ;r0 ficará com o valor de r1 e r1 ficará com o valor de r0
+
+LDR R0 , [r1,r2];Copia a informação para r0 , R0= Mem[R1+R2]
+
+STR R0 , [r1,r2];copia a informação do registo para a memória , Mem[r1+r2] = R0
+
+; Mem[r1+r2] simplesmente incrementa R1,R2 e o resultado é o endereço da memória
+
+bl label; incrementa LR mas PC fica igual
+
+;STACKS
+Push R0 ;Coloca o valor de R0 na stack e guarda o seu valor
+Pop R0 ;Retira o valor de R0 da stack e utiliza o valor retirado
+
