@@ -85,7 +85,8 @@ STR R0 , [r1,r2];copia a informação do registo para a memória , Mem[r1+r2] = 
 
 ; Mem[r1+r2] simplesmente incrementa R1,R2 e o resultado é o endereço da memória
 
-bl label; incrementa LR mas PC fica igual
+bl label; Incrementa pc e lr salva o valor e dá branch após 
+mov pc, lr ;manda o PC para a instrução seguinte de bl continuando a função 
 
 ;STACKS
 Push R0 ;Coloca o valor de R0 na stack e guarda o seu valor
